@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-secondary text-foreground font-sans;
+}
+
+.glass {
+  @apply bg-secondary/40 backdrop-blur-xl border border-primary/30 rounded-3xl shadow-2xl;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-yellow-400 to-cyan-400;
+}
+
+.section-padding {
+  @apply py-32 px-6;
+}
