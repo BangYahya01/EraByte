@@ -10,7 +10,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <GoldText className="text-2xl font-bold mb-4">
-              EraByte
+              R'aByte
             </GoldText>
             <p className="text-gray-300 mb-4">
               Transformasi digital untuk masa depan bisnis Anda
@@ -56,7 +56,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary/20 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 EraByte. All rights reserved.</p>
+          <p>&copy; 2024 R'aByte. All rights reserved.</p>
         </div>
       </div>
     </footer>

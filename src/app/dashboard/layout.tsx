@@ -27,7 +27,7 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-secondary/95 backdrop-blur-xl border-r border-primary/20 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform lg:translate-x-0 lg:static lg:inset-0`}>
         <div className="flex items-center justify-center h-16 px-4 border-b border-primary/20">
-          <GoldText className="text-xl font-bold">EraByte</GoldText>
+          <GoldText className="text-xl font-bold">R'aByte</GoldText>
         </div>
         <nav className="mt-8 px-4">
           <div className="space-y-2">

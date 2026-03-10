@@ -36,7 +36,7 @@ export default function AdminDashboard() {
         animate={{ opacity: 1, y: 0 }}
       >
         <h1 className="text-3xl font-bold text-white mb-2">Admin Dashboard</h1>
-        <p className="text-gray-400">Monitor sistem dan kelola platform EraByte</p>
+        <p className="text-gray-400">Monitor sistem dan kelola platform R'aByte</p>
       </motion.div>
 
       {/* KPI Cards */}
