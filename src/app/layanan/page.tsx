@@ -49,22 +49,22 @@ export default function Layanan() {
   return (
     <main className="min-h-screen bg-secondary">
       <Navbar />
-      <section className="section-padding">
-        <div className="container mx-auto">
+      <section className="section-padding pt-28">
+        <div className="container mx-auto px-2 md:px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h1 className="text-6xl font-bold gradient-text mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4 md:mb-6">
               Layanan Kami
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
               Solusi teknologi lengkap untuk membawa bisnis Anda ke era digital
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}

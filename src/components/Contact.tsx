@@ -27,22 +27,22 @@ export function Contact() {
   };
 
   return (
-    <section id="kontak" className="section-padding bg-secondary">
-      <div className="container mx-auto">
+    <section id="kontak" className="section-padding bg-secondary px-4 md:px-6">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-5xl font-bold gradient-text mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4 md:mb-6">
             Hubungi Kami
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
             Siap untuk memulai proyek Anda? Mari kita diskusikan bagaimana kami bisa membantu
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto px-2 md:px-0">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

@@ -39,19 +39,19 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="container relative z-10 text-center px-6">
+      <div className="container relative z-10 text-center px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-6xl md:text-8xl font-black gradient-text mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text mb-4 md:mb-6">
             R'aByte
           </h1>
-          <p className="text-2xl md:text-4xl font-light mb-8 text-gray-300 max-w-4xl mx-auto">
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-gray-300 max-w-4xl mx-auto">
             Transformasi Digital untuk Era Baru Teknologi
           </p>
-          <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 text-gray-400 max-w-3xl mx-auto px-2">
             Kami membantu bisnis Anda bertransformasi dengan solusi teknologi terkini dan inovatif
           </p>
         </motion.div>
@@ -61,17 +61,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12 md:mb-16"
         >
           <Link
             href="/layanan"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-secondary rounded-full font-bold text-lg hover:bg-primary/80 transition-all transform hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-primary text-secondary rounded-full font-bold text-sm md:text-base lg:text-lg hover:bg-primary/80 transition-all transform hover:scale-105 shadow-lg"
           >
-            Lihat Layanan <ArrowRight className="w-5 h-5" />
+            Lihat Layanan <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
           <Link
             href="/portfolio"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-secondary/50 border border-primary/30 text-primary rounded-full font-bold text-lg hover:bg-primary/10 transition-all transform hover:scale-105"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-secondary/50 border border-primary/30 text-primary rounded-full font-bold text-sm md:text-base lg:text-lg hover:bg-primary/10 transition-all transform hover:scale-105"
           >
             Portfolio Kami
           </Link>

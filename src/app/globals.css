@@ -17,5 +17,5 @@ body {
 }
 
 .section-padding {
-  @apply py-32 px-6;
+  @apply py-20 md:py-32 px-4 md:px-6;
 }

@@ -21,17 +21,17 @@ const recentProjects = [
 
 export default function Dashboard() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6 px-2 md:px-0">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-3xl font-bold text-white mb-2">Dashboard Overview</h1>
-        <p className="text-gray-400">Pantau progress proyek dan aktivitas Anda</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Dashboard Overview</h1>
+        <p className="text-sm md:text-base text-gray-400">Pantau progress proyek dan aktivitas Anda</p>
       </motion.div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
         {stats.map((stat, index) => (
           <motion.div
             key={stat.title}

@@ -54,23 +54,23 @@ export default function Portfolio() {
   return (
     <main className="min-h-screen bg-secondary">
       <Navbar />
-      <section className="section-padding">
-        <div className="container mx-auto">
+      <section className="section-padding pt-28">
+        <div className="container mx-auto px-2 md:px-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            <h1 className="text-6xl font-bold gradient-text mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4 md:mb-6">
               Portfolio Kami
             </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
               Kumpulan proyek terbaik yang telah kami kerjakan
             </p>
           </motion.div>
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 px-2">
             {categories.map((category) => (
               <button
                 key={category}
