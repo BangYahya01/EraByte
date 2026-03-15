@@ -46,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text mb-4 md:mb-6">
-            R'aByte
+            R&apos;aByte
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-gray-300 max-w-4xl mx-auto">
             Transformasi Digital untuk Era Baru Teknologi

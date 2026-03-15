@@ -36,7 +36,7 @@ export default function AdminDashboard() {
         animate={{ opacity: 1, y: 0 }}
       >
         <h1 className="text-3xl font-bold text-white mb-2">Admin Dashboard</h1>
-        <p className="text-gray-400">Monitor sistem dan kelola platform R'aByte</p>
+        <p className="text-gray-400">Monitor sistem dan kelola platform R&apos;aByte</p>
       </motion.div>
 
       {/* KPI Cards */}
@@ -74,7 +74,7 @@ export default function AdminDashboard() {
           <GlassCard className="p-6">
             <GoldText className="text-xl font-bold mb-6">Traffic Overview</GoldText>
             <div className="space-y-4">
-              {trafficData.map((data, index) => (
+              {trafficData.map((data) => (
                 <div key={data.month} className="flex items-center justify-between">
                   <span className="text-gray-300 w-12">{data.month}</span>
                   <div className="flex-1 mx-4">
@@ -154,7 +154,7 @@ export default function AdminDashboard() {
                 </tr>
               </thead>
               <tbody>
-                {recentUsers.map((user, index) => (
+                {recentUsers.map((user) => (
                   <tr key={user.email} className="border-b border-primary/10">
                     <td className="py-3 px-4 text-white">{user.name}</td>
                     <td className="py-3 px-4 text-gray-300">{user.email}</td>

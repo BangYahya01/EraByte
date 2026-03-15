@@ -62,7 +62,7 @@ export default function Dashboard() {
         <GlassCard className="p-6">
           <GoldText className="text-xl font-bold mb-6">Proyek Terbaru</GoldText>
           <div className="space-y-4">
-            {recentProjects.map((project, index) => (
+            {recentProjects.map((project) => (
               <div key={project.name} className="flex items-center justify-between p-4 bg-secondary/50 rounded-lg">
                 <div className="flex-1">
                   <h3 className="font-medium text-white">{project.name}</h3>

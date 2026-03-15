@@ -19,7 +19,7 @@ export function About() {
           className="glass p-12 max-w-5xl mx-auto text-lg leading-relaxed text-gray-300"
         >
           <p className="mb-6">
-            PT ERA BYTE SOLUTION (R'abyte) didirikan pada tanggal 8 Agustus 2025. Berangkat dari latar belakang tim yang kuat dalam kepemimpinan event organizer yang berfokus pada teknologi, R'abyte hadir sebagai entitas inovatif yang berdedikasi pada pengembangan solusi modern dengan mengedepankan teknologi daya guna.
+            PT ERA BYTE SOLUTION (R&apos;abyte) didirikan pada tanggal 8 Agustus 2025. Berangkat dari latar belakang tim yang kuat dalam kepemimpinan event organizer yang berfokus pada teknologi, R&apos;abyte hadir sebagai entitas inovatif yang berdedikasi pada pengembangan solusi modern dengan mengedepankan teknologi daya guna.
           </p>
           <p>
             Kami percaya bahwa teknologi harus menjadi alat yang memberdayakan dan memberikan nilai nyata dalam setiap aspek kehidupan dan bisnis.

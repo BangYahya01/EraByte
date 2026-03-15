@@ -14,7 +14,7 @@ export function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-secondary/70 backdrop-blur-xl border-b border-primary/20">
       <div className="container mx-auto px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
         <Link href="/" className="text-2xl md:text-3xl font-black gradient-text flex-shrink-0">
-          R'aByte
+          R&apos;aByte
         </Link>
 
         {/* Desktop Navigation */}

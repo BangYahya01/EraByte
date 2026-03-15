@@ -26,7 +26,7 @@ export function Team() {
           whileInView={{ opacity: 1 }}
           className="text-xl text-center max-w-4xl mx-auto mb-12 text-gray-300"
         >
-          Tim di balik PT ERA BYTE SOLUTION (R'abyte) adalah kumpulan individu berpengalaman yang memiliki latar belakang kuat sebagai Leader event organizer. Pengalaman ini telah membentuk kemampuan mereka dalam:
+          Tim di balik PT ERA BYTE SOLUTION (R&apos;abyte) adalah kumpulan individu berpengalaman yang memiliki latar belakang kuat sebagai Leader event organizer. Pengalaman ini telah membentuk kemampuan mereka dalam:
         </motion.p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamSkills.map((skill, i) => (
