@@ -14,8 +14,14 @@
   --color-background: #ffffff;
   --color-background-rgb: 255, 255, 255;
 
-  --color-foreground: #1e40af;
-  --color-foreground-rgb: 30, 64, 175;
+  --color-foreground: #000000;
+  --color-foreground-rgb: 0, 0, 0;
+}
+
+/* Ensure existing gray text utilities in light mode use the defined foreground for better contrast */
+html:not(.dark) .text-gray-300,
+html:not(.dark) .text-gray-400 {
+  color: var(--color-foreground) !important;
 }
 
 .dark {

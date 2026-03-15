@@ -59,7 +59,7 @@ export default function Layanan() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4 md:mb-6">
               Layanan Kami
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
+            <p className="text-base sm:text-lg md:text-xl text-foreground dark:text-gray-300 max-w-2xl mx-auto px-2">
               Solusi teknologi lengkap untuk membawa bisnis Anda ke era digital
             </p>
           </motion.div>
@@ -80,7 +80,7 @@ export default function Layanan() {
                     <GoldText className="text-2xl font-bold mb-4">
                       {service.title}
                     </GoldText>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
+                    <p className="text-foreground dark:text-gray-300 mb-6">{service.description}</p>
                     <div className="flex flex-wrap gap-2 justify-center">
                       {service.features.map((feature) => (
                         <Badge key={feature} variant="secondary">

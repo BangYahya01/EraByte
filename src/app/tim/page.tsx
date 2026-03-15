@@ -66,7 +66,7 @@ export default function Tim() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4 md:mb-6">
               Tim Kami
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
+            <p className="text-base sm:text-lg md:text-xl text-foreground dark:text-gray-300 max-w-2xl mx-auto px-2">
               Bertemu dengan tim profesional yang siap membantu mewujudkan visi digital Anda
             </p>
           </motion.div>
@@ -89,7 +89,7 @@ export default function Tim() {
                     {member.name}
                   </GoldText>
                   <p className="text-primary font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-300 text-sm mb-6">{member.bio}</p>
+                  <p className="text-foreground dark:text-gray-300 text-sm mb-6">{member.bio}</p>
                   <div className="flex justify-center space-x-4">
                     <a href={member.social.linkedin} className="text-gray-400 hover:text-primary transition-colors">
                       💼
