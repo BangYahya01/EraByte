@@ -4,12 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #1d4ed8; /* blue */
+  --color-primary-rgb: 29, 78, 216;
+
+  --color-secondary: #f1f5f9; /* light gray */
+  --color-secondary-rgb: 241, 245, 249;
+
+  --color-background: #ffffff;
+  --color-background-rgb: 255, 255, 255;
+
+  --color-foreground: #0f172a;
+  --color-foreground-rgb: 15, 23, 42;
+}
+
+.dark {
+  --color-primary: #C9A84C;
+  --color-primary-rgb: 201, 168, 76;
+
+  --color-secondary: #080C14;
+  --color-secondary-rgb: 8, 12, 20;
+
+  --color-background: #080C14;
+  --color-background-rgb: 8, 12, 20;
+
+  --color-foreground: #ffffff;
+  --color-foreground-rgb: 255, 255, 255;
+}
+
 body {
-  @apply bg-secondary text-foreground font-sans;
+  @apply bg-background text-foreground font-sans;
 }
 
 .glass {
-  @apply bg-secondary/40 backdrop-blur-xl border border-primary/30 rounded-3xl shadow-2xl;
+  background-color: rgba(var(--color-secondary-rgb), 0.4);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  @apply backdrop-blur-xl rounded-3xl shadow-2xl;
 }
 
 .gradient-text {
