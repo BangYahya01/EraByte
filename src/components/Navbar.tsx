@@ -1,21 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Layers, Grid, Users, Phone } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const update = () => setIsMobile(window.matchMedia("(max-width: 1023px)").matches);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-secondary/70 backdrop-blur-xl border-b border-primary/20">
-      <div className="container mx-auto px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
-        <Link href="/" className="text-2xl md:text-3xl font-black gradient-text flex-shrink-0">
-          R&apos;aByte
-        </Link>
+    <>
+      <nav className="fixed top-0 w-full z-50 bg-secondary/70 backdrop-blur-xl border-b border-primary/20">
+        <div className="container mx-auto px-4 md:px-6 py-4 md:py-5 flex justify-between items-center">
+          <Link href="/" className="text-2xl md:text-3xl font-black gradient-text flex-shrink-0">
+            R&apos;aByte
+          </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex gap-4 xl:gap-10 text-sm md:text-base xl:text-lg">
@@ -39,6 +48,7 @@ export function Navbar() {
           </button>
         </div>
       </div>
+    </nav>
 
       {/* Mobile Navigation */}
       {isOpen && (
@@ -53,6 +63,34 @@ export function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+
+      {/* Mobile Bottom Nav (for Chrome mobile & small screens) */}
+      {isMobile && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-secondary/95 backdrop-blur-xl border-t border-primary/20">
+          <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+            <Link href="/" className="flex flex-col items-center text-sm text-foreground hover:text-primary">
+              <Home className="w-5 h-5" />
+              <span>Beranda</span>
+            </Link>
+            <Link href="/layanan" className="flex flex-col items-center text-sm text-foreground hover:text-primary">
+              <Layers className="w-5 h-5" />
+              <span>Layanan</span>
+            </Link>
+            <Link href="/portfolio" className="flex flex-col items-center text-sm text-foreground hover:text-primary">
+              <Grid className="w-5 h-5" />
+              <span>Portfolio</span>
+            </Link>
+            <Link href="/tim" className="flex flex-col items-center text-sm text-foreground hover:text-primary">
+              <Users className="w-5 h-5" />
+              <span>Tim</span>
+            </Link>
+            <Link href="/kontak" className="flex flex-col items-center text-sm text-foreground hover:text-primary">
+              <Phone className="w-5 h-5" />
+              <span>Kontak</span>
+            </Link>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
