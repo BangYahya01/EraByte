@@ -44,9 +44,6 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("dark")} className="cursor-pointer px-4 py-2 hover:bg-primary/10 transition">
           🌙 Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")} className="cursor-pointer px-4 py-2 hover:bg-primary/10 transition">
-          💻 System
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );
