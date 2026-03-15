@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const values = [
   { title: "Teknologi Daya Guna", desc: "Mengembangkan dan menerapkan teknologi yang memberikan manfaat nyata dan berkelanjutan." },
@@ -28,10 +29,19 @@ export function Values() {
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="glass p-8 hover:border-purple-500/50 transition-all"
             >
-              <h3 className="text-2xl font-bold mb-4 text-purple-400">{v.title}</h3>
-              <p className="text-gray-300">{v.desc}</p>
+              <Tilt
+                tiltMaxAngleX={15}
+                tiltMaxAngleY={15}
+                scale={1.05}
+                transitionSpeed={1000}
+                className="w-full"
+              >
+                <div className="glass p-8 hover:border-purple-500/50 transition-all h-full">
+                  <h3 className="text-2xl font-bold mb-4 text-purple-400">{v.title}</h3>
+                  <p className="text-gray-300">{v.desc}</p>
+                </div>
+              </Tilt>
             </motion.div>
           ))}
         </div>

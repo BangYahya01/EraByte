@@ -12,11 +12,34 @@ export function Contact() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    alert("Pesan telah dikirim!");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("https://formspree.io/f/xpznqkgj", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -100,11 +123,18 @@ export function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-secondary py-3 rounded-lg font-medium hover:bg-primary/80 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-secondary py-3 rounded-lg font-medium hover:bg-primary/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   suppressHydrationWarning
                 >
-                  Kirim Pesan
+                  {isSubmitting ? "Mengirim..." : "Kirim Pesan"}
                 </button>
+                {submitStatus === "success" && (
+                  <p className="text-green-400 text-sm mt-2">Pesan berhasil dikirim!</p>
+                )}
+                {submitStatus === "error" && (
+                  <p className="text-red-400 text-sm mt-2">Gagal mengirim pesan. Coba lagi.</p>
+                )}
               </form>
             </GlassCard>
           </motion.div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
 const services = [
   { title: "Design", desc: "Menyediakan layanan desain kreatif dan fungsional, termasuk desain antarmuka pengguna (UI/UX), desain grafis, dan branding." },
@@ -27,10 +28,19 @@ export function Services() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
-              className="glass p-8 text-center hover:border-blue-500/50 transition-all"
             >
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">{s.title}</h3>
-              <p className="text-gray-300">{s.desc}</p>
+              <Tilt
+                tiltMaxAngleX={15}
+                tiltMaxAngleY={15}
+                scale={1.05}
+                transitionSpeed={1000}
+                className="w-full"
+              >
+                <div className="glass p-8 text-center hover:border-blue-500/50 transition-all h-full">
+                  <h3 className="text-2xl font-bold mb-4 text-blue-400">{s.title}</h3>
+                  <p className="text-gray-300">{s.desc}</p>
+                </div>
+              </Tilt>
             </motion.div>
           ))}
         </div>
