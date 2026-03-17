@@ -38,7 +38,7 @@ export function Navbar() {
 
         <div>
           <Link href="/" className="text-2xl md:text-3xl font-black gradient-text flex-shrink-0">
-            AI <Agent></Agent>
+            AI Solutions
           </Link>
         </div>
 
