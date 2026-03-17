@@ -36,6 +36,12 @@ export function Navbar() {
           <Link href="/kontak" className="hover:text-primary transition whitespace-nowrap">Kontak</Link>
         </div>
 
+        <div>
+          <Link href="/" className="text-2xl md:text-3xl font-black gradient-text flex-shrink-0">
+            AI <Agent></Agent>
+          </Link>
+        </div>
+
         {/* Mobile Menu Button & Theme Toggle */}
         <div className="flex items-center gap-3">
           <ModeToggle />
