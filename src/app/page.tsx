@@ -8,7 +8,6 @@ import { Services } from "@/components/Services";
 import { Team } from "@/components/Team";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { AIAgentBubble } from "@/components/AIAgentBubble";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Team />
       <Contact />
       <Footer />
-      <AIAgentBubble />
     </main>
   );
 }
