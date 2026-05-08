@@ -1,23 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        accent: 'var(--color-primary)',
-        background: 'var(--color-background)',
-        foreground: 'var(--color-foreground)',
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        danger: "var(--color-danger)",
+        background: "var(--color-background)",
+        foreground: "var(--color-foreground)",
+        card: "var(--color-card)",
+        muted: "var(--color-muted)",
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['DM Sans', 'sans-serif'],
+        serif: ["Playfair Display", "serif"],
+        sans: ["DM Sans", "sans-serif"],
       },
     },
   },
