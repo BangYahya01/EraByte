@@ -18,9 +18,9 @@ const team = [
     }
   },
   {
-    name: "Fikri",
-    role: "CTO",
-    bio: "Spesialis dalam arsitektur sistem dan cloud computing",
+    name: "M. Fatih Thoriqul Izzi",
+    role: "Front-End Web Developer",
+    bio: "Seorang pengembang frontend yang spesialis dalam membangun user journey yang mulus",
     avatar: "/api/placeholder/150/150",
     social: {
       linkedin: "#",
