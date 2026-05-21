@@ -1,4 +1,4 @@
-# EraByte Solution 💼
+# R'aByte Solution 💼
 
 **Digital platform for transforming traditional markets into modern digital businesses.**
 
