@@ -60,7 +60,7 @@ export function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4 md:mb-6">
             Hubungi Kami
           </h2>
-          <p className="text-base md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+          <p className="text-base md:text-xl text-foreground/80 dark:text-gray-300 max-w-2xl mx-auto px-4">
             Siap untuk memulai proyek Anda? Mari kita diskusikan bagaimana kami bisa membantu
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export function Contact() {
               </GoldText>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-foreground/80 dark:text-gray-300 mb-2">
                     Nama Lengkap
                   </label>
                   <input
@@ -86,13 +86,13 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-white"
+                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-foreground dark:text-white"
                     placeholder="Masukkan nama Anda"
                     suppressHydrationWarning
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-foreground/80 dark:text-gray-300 mb-2">
                     Email
                   </label>
                   <input
@@ -101,13 +101,13 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-white"
+                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-foreground dark:text-white"
                     placeholder="email@contoh.com"
                     suppressHydrationWarning
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-foreground/80 dark:text-gray-300 mb-2">
                     Pesan
                   </label>
                   <textarea
@@ -116,7 +116,7 @@ export function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-white resize-none"
+                    className="w-full px-4 py-3 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-foreground dark:text-white resize-none"
                     placeholder="Ceritakan tentang proyek Anda..."
                     suppressHydrationWarning
                   />
@@ -154,21 +154,21 @@ export function Contact() {
                   <span className="text-2xl">📧</span>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-gray-300">hello@erabyte.com</p>
+                    <p className="text-foreground/80 dark:text-gray-300">hello@erabyte.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-2xl">📱</span>
                   <div>
                     <p className="font-medium">Telepon</p>
-                    <p className="text-gray-300">+62 812-3456-7890</p>
+                    <p className="text-foreground/80 dark:text-gray-300">+62 812-3456-7890</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-2xl">📍</span>
                   <div>
                     <p className="font-medium">Alamat</p>
-                    <p className="text-gray-300">Jakarta, Indonesia</p>
+                    <p className="text-foreground/80 dark:text-gray-300">Jakarta, Indonesia</p>
                   </div>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export function Contact() {
               <GoldText className="text-xl font-bold mb-4">
                 Jam Kerja
               </GoldText>
-              <div className="space-y-2 text-gray-300">
+              <div className="space-y-2 text-foreground/80 dark:text-gray-300">
                 <p>Senin - Jumat: 09:00 - 18:00</p>
                 <p>Sabtu: 09:00 - 15:00</p>
                 <p>Minggu: Tutup</p>

@@ -88,7 +88,7 @@ export default function Teknologi() {
                 System Architecture
               </GoldText>
               <div className="w-full h-96 bg-gradient-to-br from-primary/10 to-secondary/50 rounded-2xl flex items-center justify-center">
-                <p className="text-gray-400">System Architecture Diagram akan ditampilkan di sini</p>
+                <p className="text-foreground/60">System Architecture Diagram akan ditampilkan di sini</p>
               </div>
             </GlassCard>
           </motion.div>

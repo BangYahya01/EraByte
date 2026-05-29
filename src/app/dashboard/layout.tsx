@@ -38,7 +38,7 @@ export default function DashboardLayout({
                 className={`flex items-center px-4 py-3 rounded-lg transition-colors ${
                   pathname === item.href
                     ? 'bg-primary text-secondary'
-                    : 'text-gray-300 hover:bg-primary/10 hover:text-primary'
+                    : 'text-foreground/70 hover:bg-primary/10 hover:text-primary'
                 }`}
               >
                 <span className="mr-3">{item.icon}</span>
@@ -55,7 +55,7 @@ export default function DashboardLayout({
               </div>
               <div>
                 <p className="font-medium text-sm">John Doe</p>
-                <p className="text-xs text-gray-400">User</p>
+                <p className="text-xs text-foreground/60">User</p>
               </div>
             </div>
           </GlassCard>
@@ -68,15 +68,15 @@ export default function DashboardLayout({
           <div className="flex items-center justify-between">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="lg:hidden text-gray-400 hover:text-primary"
+              className="lg:hidden text-foreground/60 hover:text-primary"
             >
               ☰
             </button>
-            <h1 className="text-xl font-semibold text-white lg:ml-0 ml-4">
+            <h1 className="text-xl font-semibold text-foreground lg:ml-0 ml-4">
               Dashboard
             </h1>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-400">Welcome back!</span>
+              <span className="text-sm text-foreground/60">Welcome back!</span>
             </div>
           </div>
         </header>

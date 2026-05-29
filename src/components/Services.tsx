@@ -37,8 +37,8 @@ export function Services() {
                 className="w-full"
               >
                 <div className="glass p-8 text-center hover:border-blue-500/50 transition-all h-full">
-                  <h3 className="text-2xl font-bold mb-4 text-blue-400">{s.title}</h3>
-                  <p className="text-gray-300">{s.desc}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">{s.title}</h3>
+                  <p className="text-foreground/80 dark:text-gray-300">{s.desc}</p>
                 </div>
               </Tilt>
             </motion.div>

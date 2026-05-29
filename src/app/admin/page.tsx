@@ -35,8 +35,8 @@ export default function AdminDashboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-3xl font-bold text-white mb-2">Admin Dashboard</h1>
-        <p className="text-gray-400">Monitor sistem dan kelola platform R&apos;aByte</p>
+        <h1 className="text-3xl font-bold text-foreground mb-2">Admin Dashboard</h1>
+        <p className="text-foreground/60">Monitor sistem dan kelola platform R&apos;aByte</p>
       </motion.div>
 
       {/* KPI Cards */}
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
             <GlassCard className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-gray-400 text-sm">{kpi.title}</p>
+                  <p className="text-foreground/60 text-sm">{kpi.title}</p>
                   <GoldText className="text-2xl font-bold">{kpi.value}</GoldText>
                   <p className={`text-sm ${kpi.trend === 'up' ? 'text-green-400' : 'text-red-400'}`}>
                     {kpi.change} dari bulan lalu
@@ -76,7 +76,7 @@ export default function AdminDashboard() {
             <div className="space-y-4">
               {trafficData.map((data) => (
                 <div key={data.month} className="flex items-center justify-between">
-                  <span className="text-gray-300 w-12">{data.month}</span>
+                  <span className="text-foreground/75 w-12">{data.month}</span>
                   <div className="flex-1 mx-4">
                     <div className="bg-secondary/30 rounded-full h-3">
                       <div
@@ -85,7 +85,7 @@ export default function AdminDashboard() {
                       ></div>
                     </div>
                   </div>
-                  <span className="text-gray-300 text-sm">{data.visitors.toLocaleString()}</span>
+                  <span className="text-foreground/75 text-sm">{data.visitors.toLocaleString()}</span>
                 </div>
               ))}
             </div>
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
               <input
                 type="text"
                 placeholder="Search users..."
-                className="px-4 py-2 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-white text-sm"
+                className="px-4 py-2 bg-secondary/50 border border-primary/30 rounded-lg focus:border-primary focus:outline-none text-foreground text-sm"
               />
               <button className="px-4 py-2 bg-primary text-secondary rounded-lg text-sm font-medium hover:bg-primary/80 transition-colors">
                 Filter
@@ -146,24 +146,24 @@ export default function AdminDashboard() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-primary/20">
-                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Name</th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Email</th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Status</th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Join Date</th>
-                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Actions</th>
+                  <th className="text-left py-3 px-4 text-foreground/60 font-medium">Name</th>
+                  <th className="text-left py-3 px-4 text-foreground/60 font-medium">Email</th>
+                  <th className="text-left py-3 px-4 text-foreground/60 font-medium">Status</th>
+                  <th className="text-left py-3 px-4 text-foreground/60 font-medium">Join Date</th>
+                  <th className="text-left py-3 px-4 text-foreground/60 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {recentUsers.map((user) => (
                   <tr key={user.email} className="border-b border-primary/10">
-                    <td className="py-3 px-4 text-white">{user.name}</td>
-                    <td className="py-3 px-4 text-gray-300">{user.email}</td>
+                    <td className="py-3 px-4 text-foreground">{user.name}</td>
+                    <td className="py-3 px-4 text-foreground/80">{user.email}</td>
                     <td className="py-3 px-4">
                       <Badge variant={user.status === "Active" ? "primary" : "secondary"}>
                         {user.status}
                       </Badge>
                     </td>
-                    <td className="py-3 px-4 text-gray-300">{user.joinDate}</td>
+                    <td className="py-3 px-4 text-foreground/80">{user.joinDate}</td>
                     <td className="py-3 px-4">
                       <div className="flex space-x-2">
                         <button className="text-primary hover:text-primary/80 text-sm">Edit</button>

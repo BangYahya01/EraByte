@@ -26,8 +26,8 @@ export default function Dashboard() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2">Dashboard Overview</h1>
-        <p className="text-sm md:text-base text-gray-400">Pantau progress proyek dan aktivitas Anda</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">Dashboard Overview</h1>
+        <p className="text-sm md:text-base text-foreground/60">Pantau progress proyek dan aktivitas Anda</p>
       </motion.div>
 
       {/* Stats Cards */}
@@ -42,7 +42,7 @@ export default function Dashboard() {
             <GlassCard className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-gray-400 text-sm">{stat.title}</p>
+                  <p className="text-foreground/60 text-sm">{stat.title}</p>
                   <GoldText className="text-2xl font-bold">{stat.value}</GoldText>
                   <p className="text-green-400 text-sm">{stat.change} dari bulan lalu</p>
                 </div>
@@ -65,7 +65,7 @@ export default function Dashboard() {
             {recentProjects.map((project) => (
               <div key={project.name} className="flex items-center justify-between p-4 bg-secondary/50 rounded-lg">
                 <div className="flex-1">
-                  <h3 className="font-medium text-white">{project.name}</h3>
+                  <h3 className="font-medium text-foreground">{project.name}</h3>
                   <div className="flex items-center space-x-4 mt-2">
                     <Badge variant={project.status === "Completed" ? "primary" : "secondary"}>
                       {project.status}
@@ -76,7 +76,7 @@ export default function Dashboard() {
                         style={{ width: `${project.progress}%` }}
                       ></div>
                     </div>
-                    <span className="text-sm text-gray-400">{project.progress}%</span>
+                    <span className="text-sm text-foreground/60">{project.progress}%</span>
                   </div>
                 </div>
               </div>

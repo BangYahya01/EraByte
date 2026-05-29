@@ -64,7 +64,7 @@ export default function Portfolio() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold gradient-text mb-4 md:mb-6">
               Portfolio Kami
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-2">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 dark:text-gray-300 max-w-2xl mx-auto px-2">
               Kumpulan proyek terbaik yang telah kami kerjakan
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function Portfolio() {
                     <GoldText className="text-xl font-bold mb-2">
                       {project.title}
                     </GoldText>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
+                    <p className="text-foreground/80 dark:text-gray-300 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech) => (
                         <Badge key={tech} variant="secondary" className="text-xs">
