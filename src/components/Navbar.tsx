@@ -2,22 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ModeToggle } from "./ModeToggle";
 import { Menu, X, Home, Layers, Grid, Users, Phone } from "lucide-react";
 
-// Logo SVG inline - R dengan panah, warna brand EraByte
-function EraByteLogoIcon({ size = 36 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100" height="100" rx="16" fill="#1a3a6b"/>
-      {/* Huruf R */}
-      <path d="M18 15 L18 85 L34 85 L34 57 L52 85 L70 85 L50 55 C62 52 68 44 68 33 C68 20 58 15 44 15 Z M34 28 L44 28 C50 28 53 31 53 37 C53 43 50 46 44 46 L34 46 Z" fill="#e63c2f"/>
-      {/* Panah kuning */}
-      <path d="M48 60 L82 26 L82 48 L70 48 L70 62 Z" fill="#f5a623"/>
-      <path d="M60 26 L82 26 L82 48 Z" fill="#f5a623" opacity="0.8"/>
-    </svg>
-  );
-}
+// Logo akan menggunakan file dari public/logo_master_sosmed.png
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,18 +30,29 @@ export function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-primary/10"
-          : "bg-background/80 backdrop-blur-md border-b border-primary/5"
-      }`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
+        ? "bg-background/95 backdrop-blur-xl shadow-lg border-b border-primary/10"
+        : "bg-background/80 backdrop-blur-md border-b border-primary/5"
+        }`}>
         <div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <EraByteLogoIcon size={38} />
-            <div className="flex flex-col leading-tight">
-              <span className="text-xl font-black gradient-text">R&apos;aByte</span>
-              <span className="text-[10px] text-muted font-medium tracking-widest uppercase hidden sm:block">EraByte Solution</span>
+            <Image
+              src="/logo_utama.png"
+              alt="EraByte Logo"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
+            <div className="flex flex-col leading-tight md:pt-0 pt-10">
+              <Image
+                src="/erabyte_text-wait.png"
+                alt="EraByte Logo"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
+              <span className="text-[9px] pt-2 text-muted font-medium tracking-widest uppercase hidden sm:block">PT Era Byte Solution</span>
             </div>
           </Link>
 

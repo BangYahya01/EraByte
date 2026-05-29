@@ -1,15 +1,7 @@
 "use client";
+import Image from "next/image";
 
-function EraByteLogoIcon({ size = 32 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100" height="100" rx="16" fill="#1a3a6b"/>
-      <path d="M18 15 L18 85 L34 85 L34 57 L52 85 L70 85 L50 55 C62 52 68 44 68 33 C68 20 58 15 44 15 Z M34 28 L44 28 C50 28 53 31 53 37 C53 43 50 46 44 46 L34 46 Z" fill="#e63c2f"/>
-      <path d="M48 60 L82 26 L82 48 L70 48 L70 62 Z" fill="#f5a623"/>
-      <path d="M60 26 L82 26 L82 48 Z" fill="#f5a623" opacity="0.8"/>
-    </svg>
-  );
-}
+// Logo akan menggunakan file dari public/logo_master_sosmed.png
 
 export function Footer() {
   return (
@@ -19,7 +11,13 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <EraByteLogoIcon size={36} />
+              <Image 
+                src="/logo_master_sosmed.png" 
+                alt="EraByte Logo" 
+                width={36} 
+                height={36} 
+                className="object-contain"
+              />
               <span className="text-2xl font-black gradient-text">R&apos;aByte</span>
             </div>
             <p className="text-muted text-sm leading-relaxed mb-5">

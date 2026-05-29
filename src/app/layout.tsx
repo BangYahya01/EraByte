@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat, Roboto_Slab } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
+});
+
+const robotoSlab = Roboto_Slab({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-roboto-slab",
+});
 
 export const metadata: Metadata = {
   title: "PT ERA BYTE SOLUTION (R'abyte)",
@@ -18,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
+      <body className={`${montserrat.variable} ${robotoSlab.variable} ${montserrat.className} font-sans`} suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

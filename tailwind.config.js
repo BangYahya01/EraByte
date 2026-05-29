@@ -19,8 +19,10 @@ module.exports = {
         muted: "var(--color-muted)",
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
-        sans: ["DM Sans", "sans-serif"],
+        sans: ["var(--font-montserrat)", "sans-serif"],
+        serif: ["var(--font-roboto-slab)", "serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        roboto: ["var(--font-roboto-slab)", "serif"],
       },
     },
   },

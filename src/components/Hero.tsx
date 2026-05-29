@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Users, Briefcase, Award } from "lucide-react";
 import { GlassCard } from "./GlassCard";
 import { GoldText } from "./GoldText";
@@ -132,9 +133,24 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black gradient-text mb-4 md:mb-6">
-            R&apos;aByte
-          </h1>
+          <div className="holographic-card p-3  bg-secondary/50 dark:bg-secondary/30 flex justify-center mb-9">
+            <Image
+              src="/logo_utama.png"
+              alt="EraByte Logo"
+              width={200}
+              height={200}
+              className="object-contain drop-shadow-5xl"
+            />
+          </div>
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/erabyte_text-wait.png"
+              alt="EraByte logo"
+              width={200}
+              height={200}
+              className="object-contain drop-shadow-2xl"
+            />
+          </div>
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-foreground dark:text-gray-300 max-w-4xl mx-auto">
             Transformasi Digital untuk Era Baru Teknologi
           </p>

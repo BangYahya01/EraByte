@@ -3,9 +3,9 @@
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 export function ModeToggle() {
-  // 1. Ambil state 'theme' juga untuk mengecek tema yang aktif saat ini
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
@@ -14,25 +14,48 @@ export function ModeToggle() {
   }, []);
 
   if (!mounted) {
-    return (
-      <button className="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 border border-primary/30 hover:bg-primary/10 h-10 w-10 md:px-4 md:py-2 bg-secondary/50 text-primary" suppressHydrationWarning>
-        <Sun className="h-5 w-5 md:h-[1.2rem] md:w-[1.2rem] rotate-0 scale-100 transition-all" />
-        <span className="sr-only">Toggle theme</span>
-      </button>
-    );
+    return <div className="w-14 h-8 bg-secondary/50 rounded-full border border-primary/20" />;
   }
 
+  const isDark = theme === "dark";
+
   return (
-    <button 
-      // 2. Tambahkan onClick di sini untuk mendeteksi toggle langsung
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 border border-primary/30 hover:bg-primary/10 h-10 w-10 md:px-4 md:py-2 bg-secondary/50 text-primary" 
-      suppressHydrationWarning
+    <button
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className="relative w-14 h-8 flex items-center bg-secondary/80 dark:bg-primary/20 rounded-full p-1 border border-primary/20 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/40 shadow-inner"
+      aria-label="Toggle dark mode"
     >
-      {/* Efek transisi ikon bawaan shadcn tetap berfungsi dengan baik */}
-      <Sun className="h-5 w-5 md:h-[1.2rem] md:w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-5 w-5 md:h-[1.2rem] md:w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span className="sr-only">Toggle theme</span>
+      <motion.div
+        layout
+        transition={{ type: "spring", stiffness: 700, damping: 30 }}
+        className="z-10 w-6 h-6 bg-white dark:bg-accent rounded-full shadow-lg flex items-center justify-center overflow-hidden"
+        style={{
+          marginLeft: isDark ? "1.5rem" : "0",
+        }}
+      >
+        {isDark ? (
+          <motion.div
+            initial={{ scale: 0, rotate: -90 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Moon className="h-4 w-4 text-white" />
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ scale: 0, rotate: 90 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Sun className="h-4 w-4 text-accent" />
+          </motion.div>
+        )}
+      </motion.div>
+
+      <div className="absolute inset-0 flex justify-between items-center px-2 opacity-30">
+        <Sun className="h-3 w-3 text-accent" />
+        <Moon className="h-3 w-3 text-primary" />
+      </div>
     </button>
   );
 }
