@@ -115,7 +115,7 @@ export default function Tim() {
                       🐦
                     </a>
                     <a href={member.social.github} className="text-gray-400 hover:text-primary transition-colors">
-                      <image src="/icon/github.png" alt="GitHub" className="w-6 h-6"/>
+                      🐙
                     </a>
                   </div>
                 </GlassCard>
