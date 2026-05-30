@@ -4,13 +4,14 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { GlassCard } from "@/components/GlassCard";
 import { GoldText } from "@/components/GoldText";
+import Image from "next/image";
 
 const team = [
   {
-    name: "Maulana Yahya",
+    name: "BigVorst",
     role: "CEO & Founder",
     bio: "Expert in digital transformation dengan pengalaman 10+ tahun",
-    avatar: "/api/placeholder/150/150",
+    avatar: "/tim/yahya.jpeg",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -18,10 +19,10 @@ const team = [
     }
   },
   {
-    name: "M. Fatih Thoriqul Izzi",
+    name: "fBoi",
     role: "Front-End Web Developer",
     bio: "Seorang pengembang frontend yang spesialis dalam membangun user journey yang mulus",
-    avatar: "/api/placeholder/150/150",
+    avatar: "/tim/fatih.jpeg",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -29,10 +30,10 @@ const team = [
     }
   },
   {
-    name: "L. Anank",
+    name: "Marsa",
     role: "Lead Developer",
     bio: "Full-stack developer dengan passion di AI dan machine learning",
-    avatar: "/api/placeholder/150/150",
+    avatar: "/tim/dani.jpeg",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -40,10 +41,21 @@ const team = [
     }
   },
   {
-    name: "Mardani Saputra",
+    name: "Jarome",
     role: "UI/UX Designer",
     bio: "Designer kreatif yang fokus pada user experience yang luar biasa",
-    avatar: "/api/placeholder/150/150",
+    avatar: "/tim/dodi.jpeg",
+    social: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#"
+    }
+  },
+  {
+    name: "Kenso. Eko",
+    role: "Back-End Developer",
+    bio: "Ahli dalam membangun arsitektur backend yang scalable dan aman",
+    avatar: "/tim/fadil.jpeg",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -82,8 +94,14 @@ export default function Tim() {
                 className="group"
               >
                 <GlassCard className="text-center h-full group-hover:border-primary/50 transition-all duration-300">
-                  <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/50 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl">👤</span>
+                  <div className="relative w-full h-80 mx-auto mb-1">
+                    <Image
+                      src={member.avatar}
+                      alt={member.name}
+                      width={128}
+                      height={128}
+                      className="auto object-cover rounded-full w-full h-full"
+                    />
                   </div>
                   <GoldText className="text-xl font-bold mb-2">
                     {member.name}

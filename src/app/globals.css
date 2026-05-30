@@ -18,37 +18,37 @@
   --color-secondary: #f0f4ff;
   --color-secondary-rgb: 240, 244, 255;
 
-  --color-background: #ffffff;
+  --color-background: #f8e6e6;
   --color-background-rgb: 255, 255, 255;
 
   --color-foreground: #0d1b3e;
   --color-foreground-rgb: 13, 27, 62;
 
   --color-card: #eef2ff;
-  --color-border: rgba(26, 58, 107, 0.15);
-  --color-muted: #4a6fa5;
+  --color-border: rgb(2, 9, 20);
+  --color-muted: #030c1a;
 }
 
 /* ===== DARK MODE (dominan redup, bukan gelap pekat) ===== */
 .dark {
-  --color-primary: #f5a623;
-  --color-primary-rgb: 245, 166, 35;
+  --color-primary: #FEB21A;
+  --color-primary-rgb: 254, 178, 26;
 
-  --color-accent: #e63c2f;
-  --color-accent-rgb: 230, 60, 47;
+  --color-accent: #ED3F27;
+  --color-accent-rgb: 237, 63, 39;
 
-  --color-secondary: #1e2d50;
-  --color-secondary-rgb: 30, 45, 80;
+  --color-secondary: #030816;
+  --color-secondary-rgb: 19, 70, 134;
 
-  --color-background: #162040;
+  --color-background: #030816;
   --color-background-rgb: 22, 32, 64;
 
   --color-foreground: #e8edf8;
   --color-foreground-rgb: 232, 237, 248;
 
-  --color-card: #1e2d50;
-  --color-border: rgba(245, 166, 35, 0.2);
-  --color-muted: #a0b4d6;
+  --color-card: #030816;
+  --color-border: #FEB21A;
+  --color-muted: #dfdfdf;
 }
 
 body {
@@ -57,7 +57,7 @@ body {
 }
 
 .glass {
-  background-color: rgba(var(--color-secondary-rgb), 0.5);
+  background-color: rgba(var(--color-secondary), 0.5);
   border: 1px solid var(--color-border);
   @apply backdrop-blur-xl rounded-3xl shadow-xl;
 }
@@ -148,3 +148,4 @@ body {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+

@@ -12,7 +12,7 @@ const teamSkills = [
 
 export function Team() {
   return (
-    <section id="tim" className="section-padding bg-gradient-to-t from-black to-purple-950">
+    <section id="tim" className="section-padding relative">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}

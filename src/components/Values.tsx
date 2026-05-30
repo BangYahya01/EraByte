@@ -13,7 +13,7 @@ const values = [
 
 export function Values() {
   return (
-    <section className="section-padding bg-gradient-to-b from-black to-purple-950">
+    <section className="section-padding relative">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}
