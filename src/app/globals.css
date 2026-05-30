@@ -15,16 +15,16 @@
   --color-danger: #e63c2f;
   --color-danger-rgb: 230, 60, 47;
 
-  --color-secondary: #f0f4ff;
-  --color-secondary-rgb: 240, 244, 255;
+  --color-secondary: #f7c0c0;
+  --color-secondary-rgb: 247, 192, 192;
 
-  --color-background: #f8e6e6;
-  --color-background-rgb: 255, 255, 255;
+  --color-background: #c0f7eb;
+  --color-background-rgb: 247, 192, 192;
 
   --color-foreground: #0d1b3e;
   --color-foreground-rgb: 13, 27, 62;
 
-  --color-card: #eef2ff;
+  --color-card: #e8edf8;
   --color-border: rgb(2, 9, 20);
   --color-muted: #030c1a;
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .glass {
-  background-color: rgba(var(--color-secondary), 0.5);
+  background-color: rgba(var(--color-card), 0.5);
   border: 1px solid var(--color-border);
   @apply backdrop-blur-xl rounded-3xl shadow-xl;
 }

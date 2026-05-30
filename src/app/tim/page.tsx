@@ -11,7 +11,7 @@ const team = [
     name: "BigVorst",
     role: "CEO & Founder",
     bio: "Expert in digital transformation dengan pengalaman 10+ tahun",
-    avatar: "/tim/yahya.jpeg",
+    avatar: "/tim/g5.png",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -22,7 +22,7 @@ const team = [
     name: "fBoi",
     role: "Front-End Web Developer",
     bio: "Seorang pengembang frontend yang spesialis dalam membangun user journey yang mulus",
-    avatar: "/tim/fatih.jpeg",
+    avatar: "/tim/fatihx.png",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -31,9 +31,9 @@ const team = [
   },
   {
     name: "Marsa",
-    role: "Lead Developer",
-    bio: "Full-stack developer dengan passion di AI dan machine learning",
-    avatar: "/tim/dani.jpeg",
+    role: "UI/UX Designer",
+    bio: "Designer kreatif yang fokus pada user experience yang luar biasa",
+    avatar: "/tim/danix.png",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -41,10 +41,10 @@ const team = [
     }
   },
   {
-    name: "Jarome",
-    role: "UI/UX Designer",
-    bio: "Designer kreatif yang fokus pada user experience yang luar biasa",
-    avatar: "/tim/dodi.jpeg",
+    name: "Kido",
+    role: "Backend Developer",
+    bio: "Ahli dalam membangun arsitektur backend yang scalable dan aman",
+    avatar: "/tim/dodix.png",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -53,9 +53,9 @@ const team = [
   },
   {
     name: "Kenso. Eko",
-    role: "Back-End Developer",
-    bio: "Ahli dalam membangun arsitektur backend yang scalable dan aman",
-    avatar: "/tim/fadil.jpeg",
+    role: "Analist & business development",
+    bio: "Ahli dalam menganalisis data dan mengembangkan strategi bisnis yang efektif",
+    avatar: "/tim/fadilx.png",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -94,13 +94,12 @@ export default function Tim() {
                 className="group"
               >
                 <GlassCard className="text-center h-full group-hover:border-primary/50 transition-all duration-300">
-                  <div className="relative w-full h-80 mx-auto mb-1">
+                  <div className="relative w-full h-80 rounded-t-3xl overflow-hidden mb-4">
                     <Image
                       src={member.avatar}
                       alt={member.name}
-                      width={128}
-                      height={128}
-                      className="auto object-cover rounded-full w-full h-full"
+                      fill
+                      className="object-cover rounded-t-3xl"
                     />
                   </div>
                   <GoldText className="text-xl font-bold mb-2">
@@ -116,7 +115,7 @@ export default function Tim() {
                       🐦
                     </a>
                     <a href={member.social.github} className="text-gray-400 hover:text-primary transition-colors">
-                      💻
+                      <image src="/icon/github.png" alt="GitHub" className="w-6 h-6"/>
                     </a>
                   </div>
                 </GlassCard>
