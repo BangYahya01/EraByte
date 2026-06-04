@@ -74,7 +74,7 @@ export default function Layanan() {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <GlassCard className="h-full group-hover:border-primary/50 transition-all duration-300">
+                <GlassCard className="h-full p-8 text-center group-hover:border-primary/50 transition-all duration-300">
                   <div className="text-center">
                     <div className="text-6xl mb-4">{service.icon}</div>
                     <GoldText className="text-2xl font-bold mb-4">

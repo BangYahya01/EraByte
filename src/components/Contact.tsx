@@ -71,7 +71,7 @@ export function Contact() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
           >
-            <GlassCard>
+            <GlassCard className="p-6 md:p-12">
               <GoldText className="text-2xl font-bold mb-6">
                 Kirim Pesan
               </GoldText>
@@ -146,22 +146,22 @@ export function Contact() {
             className="space-y-8"
           >
             <GlassCard>
-              <GoldText className="text-2xl font-bold mb-6">
+              <GoldText className="p-6 md:p-12 text-2xl font-bold mb-6">
                 Informasi Kontak
               </GoldText>
-              <div className="space-y-4">
+              <div className="p-6 space-y-4">
                 <div className="flex items-center space-x-4">
                   <span className="text-2xl">📧</span>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-foreground/80 dark:text-gray-300">hello@erabyte.com</p>
+                    <p className="text-foreground/80 dark:text-gray-300">erabytesolution@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-2xl">📱</span>
                   <div>
                     <p className="font-medium">Telepon</p>
-                    <p className="text-foreground/80 dark:text-gray-300">+62 812-3456-7890</p>
+                    <p className="text-foreground/80 dark:text-gray-300">+62 819-1839-7882</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -175,10 +175,10 @@ export function Contact() {
             </GlassCard>
 
             <GlassCard>
-              <GoldText className="text-xl font-bold mb-4">
+              <GoldText className="p-6 md:p-12 text-xl font-bold mb-4">
                 Jam Kerja
               </GoldText>
-              <div className="space-y-2 text-foreground/80 dark:text-gray-300">
+              <div className="p-6 space-y-2 text-foreground/80 dark:text-gray-300">
                 <p>Senin - Jumat: 09:00 - 18:00</p>
                 <p>Sabtu: 09:00 - 15:00</p>
                 <p>Minggu: Tutup</p>

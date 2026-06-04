@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export function AIAgentBubble() {
@@ -11,8 +12,15 @@ export function AIAgentBubble() {
       {isOpen && (
         <div className="bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4 mb-2 max-w-xs backdrop-blur-lg border border-primary/20">
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            Halo! 👋 Bagaimana saya bisa membantu Anda hari ini?
+            Halo! 👋 Akses chatbot dari sini untuk tanya layanan, status, atau dukungan.
           </p>
+          <Link
+            href="/dashboard/chat"
+            className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-secondary hover:bg-primary/90 transition"
+            onClick={() => setIsOpen(false)}
+          >
+            Buka Chatbot
+          </Link>
         </div>
       )}
 

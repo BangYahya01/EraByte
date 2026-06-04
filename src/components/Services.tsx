@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 const services = [
   { title: "Design", desc: "Menyediakan layanan desain kreatif dan fungsional, termasuk desain antarmuka pengguna (UI/UX), desain grafis, dan branding." },
-  { title: "Pembuatan Makalah", desc: "Membantu dalam penyusunan dan penulisan makalah atau dokumen teknis yang berkualitas tinggi, didukung oleh riset mendalam." },
+  { title: "Social Media Specialist", desc: "Mengelola dan mengoptimalkan kehadiran digital perusahaan di platform media sosial, termasuk strategi konten, kampanye iklan, dan interaksi dengan audiens." },
   { title: "Riset", desc: "Melakukan riset pasar, riset teknologi, dan riset strategis untuk mendukung pengembangan produk, pengambilan keputusan, dan inovasi." },
   { title: "Pengembangan Solusi Modern", desc: "Menciptakan dan mengimplementasikan solusi teknologi terkini, termasuk pengembangan web, aplikasi, dan sistem berbasis teknologi daya guna." },
 ];
@@ -36,9 +36,9 @@ export function Services() {
                 transitionSpeed={1000}
                 className="w-full"
               >
-                <div className="glass p-8 text-center hover:border-blue-500/50 transition-all h-full">
+                <div className="glass p-8 text-center hover:border-blue-500/50 transition-all h-80">
                   <h3 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">{s.title}</h3>
-                  <p className="text-foreground/80 dark:text-gray-300">{s.desc}</p>
+                  <p className="text-justify ext-foreground/80 dark:text-gray-300">{s.desc}</p>
                 </div>
               </Tilt>
             </motion.div>

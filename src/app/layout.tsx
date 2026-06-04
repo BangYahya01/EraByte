@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Roboto_Slab } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { AIAgentBubble } from "@/components/AIAgentBubble";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -36,6 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScroll />
+          <AIAgentBubble />
           {children}
         </ThemeProvider>
       </body>

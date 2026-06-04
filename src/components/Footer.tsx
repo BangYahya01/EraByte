@@ -63,8 +63,8 @@ export function Footer() {
           <div>
             <h3 className="text-base font-bold mb-4 text-foreground">Kontak</h3>
             <ul className="space-y-2 text-sm text-muted">
-              <li className="flex items-center gap-2">📧 hello@erabyte.com</li>
-              <li className="flex items-center gap-2">📱 +62 812-3456-7890</li>
+              <li className="flex items-center gap-2">📧 erabytesolution@gmail.com</li>
+              <li className="flex items-center gap-2">📱 +62 819-1839-7882</li>
               <li className="flex items-center gap-2">📍 Lombok, NTB</li>
             </ul>
           </div>

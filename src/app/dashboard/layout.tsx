@@ -8,6 +8,7 @@ import { GlassCard } from "@/components/GlassCard";
 
 const sidebarItems = [
   { name: "Dashboard", href: "/dashboard", icon: "📊" },
+  { name: "Chatbot", href: "/dashboard/chat", icon: "🤖" },
   { name: "Proyek", href: "/dashboard/proyek", icon: "📁" },
   { name: "Invoice", href: "/dashboard/invoice", icon: "💰" },
   { name: "Dokumen", href: "/dashboard/dokumen", icon: "📄" },
@@ -27,7 +28,9 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <div className={`fixed inset-y-0 left-0 z-50 w-64 bg-secondary/95 backdrop-blur-xl border-r border-primary/20 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform lg:translate-x-0 lg:static lg:inset-0`}>
         <div className="flex items-center justify-center h-16 px-4 border-b border-primary/20">
-          <GoldText className="text-xl font-bold">R&apos;aByte</GoldText>
+          <Link href="/" className="flex items-center">
+             <img src="/logo_utama.png" alt="Logo" className="h-8 w-8 mr-3" />
+          </Link>
         </div>
         <nav className="mt-8 px-4">
           <div className="space-y-2">
@@ -55,7 +58,7 @@ export default function DashboardLayout({
               </div>
               <div>
                 <p className="font-medium text-sm">John Doe</p>
-                <p className="text-xs text-foreground/60">User</p>
+                <p className="text-xs text-foreground/60">Pengguna</p>
               </div>
             </div>
           </GlassCard>
@@ -73,10 +76,10 @@ export default function DashboardLayout({
               ☰
             </button>
             <h1 className="text-xl font-semibold text-foreground lg:ml-0 ml-4">
-              Dashboard
+              Dasbor
             </h1>
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-foreground/60">Welcome back!</span>
+              <span className="text-sm text-foreground/60">Selamat datang kembali!</span>
             </div>
           </div>
         </header>

@@ -39,7 +39,7 @@ export function Values() {
               >
                 <div className="glass p-8 hover:border-purple-500/50 transition-all h-full">
                   <h3 className="text-2xl font-bold mb-4 text-purple-400">{v.title}</h3>
-                  <p className="text-gray-300">{v.desc}</p>
+                  <p className="text-justify gray-300">{v.desc}</p>
                 </div>
               </Tilt>
             </motion.div>

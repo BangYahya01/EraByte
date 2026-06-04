@@ -36,7 +36,7 @@ export function Team() {
               whileInView={{ opacity: 1, y: 0 }}
               className="glass p-8 hover:border-purple-500/50 transition-all"
             >
-              <p className="text-lg text-gray-300">{skill}</p>
+              <p className="text-lg text-justify text-gray-300">{skill}</p>
             </motion.div>
           ))}
         </div>

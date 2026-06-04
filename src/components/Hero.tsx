@@ -6,9 +6,7 @@ import Image from "next/image";
 import { ArrowRight, Users, Briefcase, Award } from "lucide-react";
 import { GlassCard } from "./GlassCard";
 import { GoldText } from "./GoldText";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
-import { useCallback } from "react";
+import Particles from "@tsparticles/react";
 
 const stats = [
   { icon: Users, value: "500+", label: "Clients" },
@@ -17,17 +15,11 @@ const stats = [
 ];
 
 export function Hero() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const particlesInit = useCallback(async (engine: any) => {
-    await loadFull(engine);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-secondary overflow-hidden pt-28">
       {/* Particle Background */}
       <Particles
         id="tsparticles"
-        init={particlesInit}
         options={{
           background: {
             color: {
@@ -84,7 +76,8 @@ export function Hero() {
             number: {
               density: {
                 enable: true,
-                area: 800,
+                width: 800,
+                height: 800,
               },
               value: 80,
             },
