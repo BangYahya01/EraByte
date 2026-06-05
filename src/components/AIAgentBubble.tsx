@@ -15,7 +15,11 @@ export function AIAgentBubble() {
             Halo! 👋 Akses chatbot dari sini untuk tanya layanan, status, atau dukungan.
           </p>
           <Link
+<<<<<<< HEAD
             href="/chat"
+=======
+            href="/dashboard/chat"
+>>>>>>> 9995d3cb40ea458deb5b0d7553068927223b7d4b
             className="mt-3 inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-secondary hover:bg-primary/90 transition"
             onClick={() => setIsOpen(false)}
           >
@@ -55,4 +59,8 @@ export function AIAgentBubble() {
       `}</style>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9995d3cb40ea458deb5b0d7553068927223b7d4b
