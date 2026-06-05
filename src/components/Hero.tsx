@@ -1,0 +1,201 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Users, Briefcase, Award } from "lucide-react";
+import { GlassCard } from "./GlassCard";
+import { GoldText } from "./GoldText";
+import Particles from "@tsparticles/react";
+
+const stats = [
+  { icon: Users, value: "500+", label: "Clients" },
+  { icon: Briefcase, value: "200+", label: "Projects" },
+  { icon: Award, value: "50+", label: "Awards" },
+];
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-secondary overflow-hidden pt-28">
+      {/* Particle Background */}
+      <Particles
+        id="tsparticles"
+        options={{
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: true,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#C9A84C",
+            },
+            links: {
+              color: "#C9A84C",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 2,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                width: 800,
+                height: 800,
+              },
+              value: 80,
+            },
+            opacity: {
+              value: 0.5,
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+        className="absolute inset-0"
+      />
+
+      {/* Animated Grid Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(201, 168, 76, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(201, 168, 76, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}>
+          <motion.div
+            animate={{
+              x: [0, 50, 0],
+              y: [0, 25, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5"
+          />
+        </div>
+      </div>
+
+      <div className="container relative z-10 text-center px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="holographic-card p-3  bg-secondary/50 dark:bg-secondary/30 flex justify-center mb-9">
+            <Image
+              src="/logo_utama.png"
+              alt="EraByte Logo"
+              width={200}
+              height={200}
+              className="object-contain drop-shadow-5xl"
+            />
+          </div>
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/erabyte_text-wait.png"
+              alt="EraByte logo"
+              width={200}
+              height={200}
+              className="object-contain drop-shadow-2xl"
+            />
+          </div>
+          <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mb-6 md:mb-8 text-foreground dark:text-gray-300 max-w-4xl mx-auto">
+            Transformasi Digital untuk Era Baru Teknologi
+          </p>
+          <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-12 text-foreground dark:text-gray-400 max-w-3xl mx-auto px-2">
+            Kami membantu bisnis Anda bertransformasi dengan solusi teknologi terkini dan inovatif
+          </p>
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center mb-12 md:mb-16"
+        >
+          <Link
+            href="/layanan"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-primary text-secondary rounded-full font-bold text-sm md:text-base lg:text-lg hover:bg-primary/80 transition-all transform hover:scale-105 shadow-lg"
+          >
+            Lihat Layanan <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+          </Link>
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-secondary/50 border border-primary/30 text-primary rounded-full font-bold text-sm md:text-base lg:text-lg hover:bg-primary/10 transition-all transform hover:scale-105"
+          >
+            Portfolio Kami
+          </Link>
+        </motion.div>
+
+        {/* Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8 + index * 0.2 }}
+            >
+              <GlassCard className="p-6 text-center">
+                <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+                <GoldText className="text-3xl font-bold mb-2">{stat.value}</GoldText>
+                <p className="text-foreground dark:text-gray-300">{stat.label}</p>
+              </GlassCard>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}

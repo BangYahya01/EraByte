@@ -1,0 +1,151 @@
+/* Montserrat is loaded via layout.tsx */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== LIGHT MODE (dominan cerah, bersih, profesional) ===== */
+:root {
+  --color-primary: #1a3a6b;
+  --color-primary-rgb: 26, 58, 107;
+
+  --color-accent: #f5a623;
+  --color-accent-rgb: 245, 166, 35;
+
+  --color-danger: #e63c2f;
+  --color-danger-rgb: 230, 60, 47;
+
+  --color-secondary: #f7c0c0;
+  --color-secondary-rgb: 247, 192, 192;
+
+  --color-background: #c0f7eb;
+  --color-background-rgb: 247, 192, 192;
+
+  --color-foreground: #0d1b3e;
+  --color-foreground-rgb: 13, 27, 62;
+
+  --color-card: #e8edf8;
+  --color-border: rgb(2, 9, 20);
+  --color-muted: #030c1a;
+}
+
+/* ===== DARK MODE (dominan redup, bukan gelap pekat) ===== */
+.dark {
+  --color-primary: #FEB21A;
+  --color-primary-rgb: 254, 178, 26;
+
+  --color-accent: #ED3F27;
+  --color-accent-rgb: 237, 63, 39;
+
+  --color-secondary: #030816;
+  --color-secondary-rgb: 19, 70, 134;
+
+  --color-background: #030816;
+  --color-background-rgb: 22, 32, 64;
+
+  --color-foreground: #e8edf8;
+  --color-foreground-rgb: 232, 237, 248;
+
+  --color-card: #030816;
+  --color-border: #FEB21A;
+  --color-muted: #dfdfdf;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.glass {
+  background-color: rgba(var(--color-card), 0.5);
+  border: 1px solid var(--color-border);
+  @apply backdrop-blur-xl rounded-3xl shadow-xl;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1a3a6b, #f5a623, #e63c2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #f5a623, #e63c2f, #ffd166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  @apply py-20 md:py-32 px-4 md:px-6;
+}
+
+/* Card styles */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(26, 58, 107, 0.15);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 12px 40px rgba(245, 166, 35, 0.15);
+}
+
+/* Button primary */
+.btn-primary {
+  background: linear-gradient(135deg, #1a3a6b, #2952a3);
+  color: white;
+  border: none;
+  @apply rounded-xl px-6 py-3 font-semibold transition-all;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #f5a623, #e63c2f);
+  transform: translateY(-1px);
+}
+
+.dark .btn-primary {
+  background: linear-gradient(135deg, #f5a623, #e63c2f);
+}
+
+.dark .btn-primary:hover {
+  background: linear-gradient(135deg, #ffd166, #f5a623);
+}
+
+/* ===== HOLOGRAPHIC EFFECT ===== */
+.holographic-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(0deg,
+      transparent,
+      transparent 30%,
+      rgba(var(--color-accent-rgb), 0.3));
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.holographic-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(var(--color-accent-rgb), 0.3);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
