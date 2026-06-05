@@ -6,7 +6,7 @@ export interface ChatResponse {
   reply: string;
 }
 
-const SYSTEM_INSTRUCTION = `Jawab semua pertanyaan dalam bahasa Indonesia. Jika ini adalah chat pertama, fokuskan jawaban pada pembahasan model tren Lombok, dengan menekankan aspek-aspek yang relevan dari terbentuknya EraByte, seperti visi bisnis, inovasi teknologi, dampak lokal, dan strategi pengembangan produk.`;
+const SYSTEM_INSTRUCTION = `Jawab semua pertanyaan dalam bahasa Indonesia.`;
 
 /**
  * Fungsi untuk mengirim pesan chat dari frontend ke backend EraByte AI
